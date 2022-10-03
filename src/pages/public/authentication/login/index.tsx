@@ -12,7 +12,6 @@ export default function Login() {
     setLoadingLogin(true);
     const email = formData.email;
     const password = formData.password;
-
     setTimeout(() => {
       setLoadingLogin(false);
       setLoadingScreen(false);
