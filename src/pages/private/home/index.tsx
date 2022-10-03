@@ -91,7 +91,7 @@ export default function Home({ walletValue = 0 }: IHome) {
     <div>
       <ProfileHeader walletValue={walletValue} />
       {/*  */}
-      <div className='mx-5 mt-10 mb-10'>
+      {/* <div className='mx-5 mt-10 mb-10'>
         {categories.map((item: any) => (
           <div key={item.id}>
             <CategoryCard
@@ -102,6 +102,9 @@ export default function Home({ walletValue = 0 }: IHome) {
             />
           </div>
         ))}
+      </div> */}
+      <div className='mx-5 mt-10 mb-10'>
+        <SlideCategories />
       </div>
       <div>
         {company.map((item: any) => (

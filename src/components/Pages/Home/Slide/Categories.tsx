@@ -41,77 +41,67 @@ export default function SlideCategories({ categories }: any) {
   // });
 
   return (
-    <div className='keen-slider flex flex-row lowercase'>
-      <Swiper slidesPerView={2} className='mySwiper'>
+    <div className='flex flex-row items-center lowercase'>
+      <Swiper
+        slidesPerView={2}
+        onSwiper={(swiper) => swiper}
+        className='mySwiper flex items-center'
+      >
         <SwiperSlide>
-          <div className={`keen-slider__slide number-slide1 `}>
-            <CategoryCard title='cervejas' image={Cerveja.src} color='orange' href={''} />
-          </div>
+          <CategoryCard title='cervejas' image={Cerveja.src} color='orange' href={''} />
         </SwiperSlide>
 
         {/*  */}
         <SwiperSlide>
           {' '}
-          <div className={`keen-slider__slide number-slide2 `}>
-            <CategoryCard
-              title='refrigerante'
-              image={Refrigerante.src}
-              color='red'
-              href={''}
-            />
-          </div>
+          <CategoryCard
+            title='refrigerante'
+            image={Refrigerante.src}
+            color='red'
+            href={''}
+          />
+        </SwiperSlide>
+
+        {/*  */}
+        <SwiperSlide>
+          <CategoryCard title='Wiskys' image={Wiskys.src} color='gray' href={''} />
+        </SwiperSlide>
+
+        {/*  */}
+        <SwiperSlide>
+          <CategoryCard
+            title='vinho e espumantes'
+            image={
+              'https://www.teclasap.com.br/wp-content/uploads/2011/08/tac%CC%A7a-de-vinho.png'
+            }
+            color='purple'
+            href={''}
+          />
+        </SwiperSlide>
+
+        {/*  */}
+        <SwiperSlide>
+          <CategoryCard
+            title='vodka'
+            image={
+              'https://www.absolut.com/contentassets/36e622266f3d4f158729627194aa848a/avo-1750-ml-black-high-res.jpg?impolicy=imagecrop&width=1170&height=818'
+            }
+            color='black'
+            href={''}
+          />
         </SwiperSlide>
 
         {/*  */}
         <SwiperSlide>
           {' '}
-          <div className={`keen-slider__slide number-slide3`}>
-            <CategoryCard title='Wiskys' image={Wiskys.src} color='gray' href={''} />
-          </div>
-        </SwiperSlide>
-
-        {/*  */}
-        <SwiperSlide>
-          {' '}
-          <div className={`keen-slider__slide number-slide4`}>
-            <CategoryCard
-              title='vinho e espumantes'
-              image={
-                'https://www.teclasap.com.br/wp-content/uploads/2011/08/tac%CC%A7a-de-vinho.png'
-              }
-              color='purple'
-              href={''}
-            />
-          </div>
-        </SwiperSlide>
-
-        {/*  */}
-        <SwiperSlide>
-          <div className={`keen-slider__slide number-slide5`}>
-            <CategoryCard
-              title='vodka'
-              image={
-                'https://www.absolut.com/contentassets/36e622266f3d4f158729627194aa848a/avo-1750-ml-black-high-res.jpg?impolicy=imagecrop&width=1170&height=818'
-              }
-              color='black'
-              href={''}
-            />
-          </div>
-        </SwiperSlide>
-
-        {/*  */}
-        <SwiperSlide>
-          {' '}
-          <div className={`keen-slider__slide number-slide6`}>
-            <CategoryCard
-              title='agua'
-              image={
-                'https://i0.wp.com/maprint.com.br/wp-content/uploads/2017/08/garrafa-de-agua-mineral-500ml.png?fit=400%2C400&ssl=1'
-              }
-              color='gray'
-              href={''}
-            />
-          </div>
+          <CategoryCard
+            title='agua'
+            image={
+              'https://i0.wp.com/maprint.com.br/wp-content/uploads/2017/08/garrafa-de-agua-mineral-500ml.png?fit=400%2C400&ssl=1'
+            }
+            color='gray'
+            href={''}
+          />
         </SwiperSlide>
       </Swiper>
     </div>
