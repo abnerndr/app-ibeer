@@ -3,7 +3,7 @@ export function classNames(...classes: string[]): string {
   }
 
 export function formatBrl(str: any){
-    var str = str.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    var str = str?.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
     return str
 }
 

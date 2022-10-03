@@ -46,7 +46,7 @@ export default function ProfileHeader({ walletValue = 0 }: Profile) {
             </span>
 
             <div className='w-20 h-5 bg-ibeer-900 rounded-3xl flex justify-center items-center text-center font-bold text-sm'>
-              <span className=''>{formatBrl(walletValue)}</span>
+              <span className=''>R$00,00</span>
             </div>
           </div>
         </div>
