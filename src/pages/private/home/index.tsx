@@ -82,9 +82,6 @@ const categories = [
 ];
 
 export default function Home({ user, walletValue = 0, companies }: IHome) {
-  console.log(companies);
-  const newCompanies = { companies };
-  console.log(newCompanies);
   const notif = () => {
     Notify({ type: 'google', message: 'teste' });
     Notify({ type: 'github', message: 'teste' });
@@ -99,15 +96,17 @@ export default function Home({ user, walletValue = 0, companies }: IHome) {
       </div>
       <div>
         {company.map((item: any) => (
-          <CompanyCard
-            image={item.photo_url}
-            delivery={item.delivery}
-            title={item.company_name}
-            rate={item.ratign}
-            card={item.payment_types.card}
-            pix={item.payment_types.pix}
-            money={item.payment_types.money}
-          />
+          <div key={item.id}>
+            <CompanyCard
+              image={item.photo_url}
+              delivery={item.delivery}
+              title={item.company_name}
+              rate={item.ratign}
+              card={item.payment_types.card}
+              pix={item.payment_types.pix}
+              money={item.payment_types.money}
+            />
+          </div>
         ))}
       </div>
     </div>
