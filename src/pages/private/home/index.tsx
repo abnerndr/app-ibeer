@@ -81,7 +81,7 @@ const categories = [
   }
 ];
 
-export default function Home({ user, walletValue = 0, companies }: IHome) {
+export default function Home({ walletValue = 0 }: IHome) {
   const notif = () => {
     Notify({ type: 'google', message: 'teste' });
     Notify({ type: 'github', message: 'teste' });
@@ -89,10 +89,19 @@ export default function Home({ user, walletValue = 0, companies }: IHome) {
 
   return (
     <div>
-      <ProfileHeader user={user} walletValue={walletValue} />
+      <ProfileHeader walletValue={walletValue} />
       {/*  */}
       <div className='mx-5 mt-10 mb-10'>
-        <SlideCategories categories={categories} />
+        {categories.map((item: any) => (
+          <div key={item.id}>
+            <CategoryCard
+              image={item.photo_url}
+              color={item.color}
+              title={item.category_name}
+              href={''}
+            />
+          </div>
+        ))}
       </div>
       <div>
         {company.map((item: any) => (

@@ -7,7 +7,7 @@ import { ShoppingCartIcon } from '@heroicons/react/solid';
 
 interface Profile {
   walletValue: number;
-  user: {
+  user?: {
     id: number;
     username: string;
     email: string;
@@ -21,7 +21,7 @@ interface Profile {
   };
 }
 
-export default function ProfileHeader({ walletValue = 0, user }: Profile) {
+export default function ProfileHeader({ walletValue = 0 }: Profile) {
   return (
     <div className='w-full h-28 rounded-2xl shadow-md bg-white'>
       <div className='flex justify-between mx-2 items-center'>
@@ -31,7 +31,7 @@ export default function ProfileHeader({ walletValue = 0, user }: Profile) {
             <Link href='/private/profile'>
               <a className=''>
                 <Avatar
-                  src={user?.photo_url || AvatarIcon.src}
+                  src={AvatarIcon.src}
                   alt={'avatar'}
                   width={70}
                   height={70}
@@ -42,7 +42,7 @@ export default function ProfileHeader({ walletValue = 0, user }: Profile) {
           </div>
           <div className='flex flex-col gap-y-1'>
             <span className='flex items-center gap-x-1 text-gray-500'>
-              olá, <p className='font-bold text-md text-gray-700'>{user?.username}</p>
+              olá, <p className='font-bold text-md text-gray-700'>teste</p>
             </span>
 
             <div className='w-20 h-5 bg-ibeer-900 rounded-3xl flex justify-center items-center text-center font-bold text-sm'>
